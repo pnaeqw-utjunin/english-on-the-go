@@ -464,7 +464,4 @@ audio {
     transform: scale(1.05);
   }
 
-  /* Ocultar spans por defecto */
-  #sufijo_14 {
-    display: none;
-  }
+  

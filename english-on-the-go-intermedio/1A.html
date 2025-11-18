@@ -45,6 +45,8 @@
 
 <div id="segmento">
 
+  <div id="story">
+
 <p>
 
 <div class="player-fixed">
@@ -245,23 +247,29 @@ That’s right. Keep practicing your English, enjoy your meals, and join us agai
 
    
 </p>
-
+</div>
    
 <script>
-  const button = document.getElementById("toggleBtn");
-  let visible = false;
+  // SOLO BUSCARÁ EL BOTÓN SI ESTÁ DENTRO DE ESTA PÁGINA
+  const page = document.getElementById("story");
 
-  button.addEventListener("click", () => {
-    const spans = document.querySelectorAll("#sufijo_14");
-    visible = !visible;
+  if (page) {
+    const button = page.querySelector("#toggleBtn");
+    let visible = false;
 
-    spans.forEach(span => {
-      span.style.display = visible ? "inline" : "none";
+    button.addEventListener("click", () => {
+      const spans = page.querySelectorAll("#sufijo_14");
+      visible = !visible;
+
+      spans.forEach(span => {
+        span.style.display = visible ? "inline" : "none";
+      });
+
+      button.textContent = visible ? "Ocultar traducción" : "Mostrar traducción";
     });
-
-    button.textContent = visible ? "Ocultar traducción" : "Mostrar traducción";
-  });
+  }
 </script>
+            
 
 
 
